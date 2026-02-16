@@ -11,7 +11,7 @@ const skillsData = [
   {
     title: "Backend",
     icon: <Server />,
-    skills: ["Java", "Spring Boot", "REST APIs", "JWT Auth"],
+    skills: ["Node.js" , "Express.js" , "REST APIs" , "JWT Auth" ],
     delay: "120ms",
   },
   {

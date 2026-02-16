@@ -71,7 +71,7 @@ export default function About() {
           <p className="mt-4 text-gray-400 text-lg leading-relaxed">
             My primary stack includes{" "}
             <span className="text-gray-200 font-medium">
-              Java, Spring Boot, React, Tailwind CSS, REST APIs, and MySQL
+              Node.js, Express.js, React, Tailwind CSS, REST APIs, MongoDB, and MySQL
             </span>.
           </p>
 
@@ -92,7 +92,7 @@ export default function About() {
               },
               {
                 title: "Backend Expertise",
-                desc: "Spring Boot, REST APIs, MySQL, Authentication & Security",
+                desc: " Node.js , Express.js , REST APIs , JWT Auth , MongoDB",
                 icon: "⚙️",
                 color: "text-purple-400",
               },
