@@ -93,17 +93,17 @@ export default function Hero() {
         </h1>
 
         {/* Subtitle */}
-        <p className="
-          mt-6 text-lg md:text-xl text-gray-400
-          leading-relaxed max-w-xl mx-auto
-          animate-fade-up
-        ">
-          I build scalable, high-performance web applications using{" "}
-          <span className="text-gray-200 font-medium">
-            Java, Spring Boot & React
-          </span>
-          . Focused on clean UI, efficient APIs, and real-world impact.
-        </p>
+       <p className="
+  mt-6 text-lg md:text-xl text-gray-400
+  leading-relaxed max-w-xl mx-auto
+  animate-fade-up
+">
+  I develop scalable and high-performance web applications using{" "}
+  <span className="text-gray-200 font-medium">
+    Node.js, Express.js, MongoDB & React.
+  </span>{" "}
+  Passionate about building efficient APIs, clean UI, and real-world solutions.
+</p>
 
         {/* Buttons */}
         <div className="
