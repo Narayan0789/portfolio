@@ -2,11 +2,23 @@ import { Github, ExternalLink } from "lucide-react";
 import useScrollReveal from "../hooks/useScrollReveal";
 import smartflowImg from "../assets/smartflow.jpg";
 import portfolioImg from "../assets/portfolio.jpg";
+import stockpilotImg from "../assets/stockpilot.jpg";
 
 export default function Projects() {
   const [ref, visible] = useScrollReveal({ threshold: 0.15 });
 
   const projects = [
+    {
+      title: "StockPilot - Inventory Management System",
+      points: [
+        "Full-stack IMS for real-time inventory tracking and low-stock alerts",
+        "Supports POS billing, atomic stock updates, and tax invoice generation",
+      ],
+      tech: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+      image: stockpilotImg,
+      code: "https://github.com/Narayan0789/inventory-management-system",
+      view: "https://inventory-management-system-weld-delta.vercel.app",
+    },
     {
       title: "Better-City-Resolution",
       points: [
@@ -26,8 +38,8 @@ export default function Projects() {
       ],
       tech: ["React", "JavaScript", "Tailwind CSS"],
       image: portfolioImg,
-      code: "https://github.com/Narayan0789/portfolio-website",
-      view: "#",
+      code: "https://github.com/Narayan0789/portfolio",
+      view: "https://portfolio-lime-omega-83.vercel.app/",
     },
   ];
 
@@ -39,7 +51,7 @@ export default function Projects() {
     >
       <div
         className={`
-          max-w-6xl mx-auto
+          max-w-7xl mx-auto
           transition-all duration-1000 ease-out
           ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}
         `}
@@ -51,7 +63,7 @@ export default function Projects() {
         <div className="w-28 h-[3px] mx-auto mt-3 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full" />
 
         {/* Grid */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((p, i) => (
             <div
               key={i}
@@ -59,6 +71,7 @@ export default function Projects() {
                 group relative rounded-2xl overflow-hidden
                 bg-white/5 backdrop-blur-xl
                 border border-white/10
+                flex flex-col h-full
                 transition-all duration-700
                 hover:-translate-y-2
                 hover:shadow-[0_30px_80px_rgba(0,0,0,0.6)]
@@ -81,39 +94,41 @@ export default function Projects() {
               </div>
 
               {/* Content */}
-              <div className="p-6">
-                <h3 className="text-white text-xl font-semibold">
-                  {p.title}
-                </h3>
+              <div className="p-6 flex flex-col flex-1 justify-between">
+                <div>
+                  <h3 className="text-white text-xl font-semibold">
+                    {p.title}
+                  </h3>
 
-                {/* Bullet points */}
-                <ul className="mt-4 space-y-2 text-gray-400 text-sm">
-                  {p.points.map((pt, idx) => (
-                    <li key={idx} className="flex gap-2">
-                      <span className="text-cyan-400">▸</span>
-                      {pt}
-                    </li>
-                  ))}
-                </ul>
+                  {/* Bullet points */}
+                  <ul className="mt-4 space-y-2 text-gray-400 text-sm">
+                    {p.points.map((pt, idx) => (
+                      <li key={idx} className="flex gap-2">
+                        <span className="text-cyan-400">▸</span>
+                        <span>{pt}</span>
+                      </li>
+                    ))}
+                  </ul>
 
-                {/* Tech */}
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {p.tech.map((t, idx) => (
-                    <span
-                      key={idx}
-                      className="
-                        px-3 py-1 text-xs rounded-full
-                        bg-white/10 text-gray-300
-                        border border-white/10
-                      "
-                    >
-                      {t}
-                    </span>
-                  ))}
+                  {/* Tech */}
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {p.tech.map((t, idx) => (
+                      <span
+                        key={idx}
+                        className="
+                          px-3 py-1 text-xs rounded-full
+                          bg-white/10 text-gray-300
+                          border border-white/10
+                        "
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
                 {/* Actions */}
-                <div className="mt-6 flex items-center gap-6">
+                <div className="mt-6 pt-2 flex items-center gap-4">
                   <a
                     href={p.code}
                     target="_blank"
